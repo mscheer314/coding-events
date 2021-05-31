@@ -30,6 +30,7 @@ public class EventsController {
                         "In this class we will cover the basics of decision and regression trees and their use in predictive " +
                         "modeling. If time permits we will begin our discussion of ensemble methods using decision trees by covering the concepts of boosting and bagging.");
 
+        model.addAttribute("events", events);
         return "events/index";
     }
 
@@ -40,7 +41,7 @@ public class EventsController {
 
     @PostMapping("create")
     public String createEvent(@RequestParam String eventName, @RequestParam String eventDescription) {
-        events.put(eventName, eventDescription);
+        events.put(eventName, eventDescription );
         return "redirect:";
     }
 }
