@@ -9,14 +9,12 @@
     <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Address</th>
     </tr>
     </thead>
     <th:block th:each="event: ${events}">
         <tr>
-            <td th:text="${event.getKey()}">Default name</td>
-            <td th:text="${event.getValue()}">Default description</td>
-            <td th:replace="fragments :: address"></td>
+            <td th:text="${event.name}">Default name</td>
+            <td th:text="${event.description}">Default description</td>
         </tr>
     </th:block>
 </table>
